@@ -44,6 +44,11 @@ hr {
 .registerbtn:hover {
   opacity: 1;
 }
+.message {
+      display: none;
+      color: green;
+      font-weight: bold;
+    }
 </style>
 </head>
 <body>
@@ -88,3 +93,11 @@ Phone :
 <input type="text" name="phone" placeholder="phone no." size="10"/ required> 
 Current Address :
 <textarea cols="80" rows="5" placeholder="Current Address" value="address" required>
+   <button id="myButton">Click Me</button>
+   <div id="successMessage" class="message">Success! Button clicked.</div>
+ 
+   <script>
+     document.getElementById('myButton').addEventListener('click', function() {
+       document.getElementById('successMessage').style.display = 'block';
+     });
+   </script>
